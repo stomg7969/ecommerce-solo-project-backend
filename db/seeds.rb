@@ -10,7 +10,7 @@
 User.destroy_all
 User.create(username: 'admin', email: 'admin', password: 'admin', isAdmin: true)
 
-# Product attributes => name, price, inventory, category, color, gender, material:[], sizes:[]
+# Product attributes => name, price, inventory, category, color, gender, material:[], sizes:[].
 Product.destroy_all
 Product.create(name: 'Boy Snug-fit White Dino Innerwear', price: 49.00, imgFront: 'https://dl.airtable.com/ul74gey2TbGJhBxEgzXE_full_%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EC%B9%B4%ED%83%88%EB%A1%9D%2000872_resized.jpg', imgBack: 'https://dl.airtable.com/8GEBjtWQgOE8A2YdYoa1_full_MCCBBMAA07.jpg', inventory: 30, category: 'innerwear', color: 'white', gender: 'boy', material: ['modal', 'cotton', 'spandex'], sizes:['small', 'medium', 'large'])
 Product.create(name: 'Boy Snug-fit Black Check Innerwear', price: 59.00, imgFront: 'https://dl.airtable.com/riiX9593TyKCTAEAwPzt_full_%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EC%B9%B4%ED%83%88%EB%A1%9D%2000906_resized.jpg', imgBack: 'https://dl.airtable.com/aGI38YrlTJ2DgDU4oiRI_full_MCCBBMAA11.jpg', inventory: 30, category: 'innerwear', color: 'black', gender: 'boy', material: ['modal', 'cotton', 'spandex'], sizes:['small', 'medium', 'large'])
