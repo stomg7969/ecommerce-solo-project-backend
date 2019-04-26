@@ -1,24 +1,10 @@
-# README
+# ecommerce-website-solo-project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Flatiron School Module 5 solo project (BACKEND)
 
-Things you may want to cover:
+- Ruby version - 2.5.3
 
-* Ruby version
+- Database creation - postgreSQL
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+\*\*For this project, frontend and backend have separate repositories.
+[Link to FRONTEND repo](https://github.com/stomg7969/ecommerce-solo-project-fronted)
