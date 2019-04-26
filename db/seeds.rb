@@ -9,6 +9,7 @@
 # First user is the admin of the website
 User.destroy_all
 User.create(username: 'admin', email: 'admin', password: 'admin', isAdmin: true)
+User.create(username: 'user1', email: 'user1', password: 'user1', isAdmin: false)
 
 # Product attributes => name, price, inventory, category, color, gender, material:[], sizes:[].
 Product.destroy_all
@@ -42,5 +43,13 @@ Product.create(name: 'Blue Plain Pants', price: 15.00, imgFront: 'https://dl.air
 Product.create(name: 'Black Stripe InnerWear', price: 24.00, imgFront: 'https://dl.airtable.com/pgVIWVTcQeybuuG9afPo_full_20180619GBstyle152594.jpg', imgBack: 'https://dl.airtable.com/FynGIi0QhmPZ2NHHt5QM_full_CDCBBMCB03.jpg', inventory: 30, category: 'innerwear', color: 'black', gender: 'boy', material: ['cotton', 'Spandex'], sizes:['small', 'medium', 'large'])
 
 # Order
+Order.destroy_all
+Order.create(user_id: 2, total_amount: 12.25, shipping_method: 'regular', status: 'pre order')
+Order.create(user_id: 2, total_amount: 14.50, shipping_method: 'express', status: 'pending')
+Order.create(user_id: 2, total_amount: 17.75, shipping_method: 'over night', status: 'ordered')
 
 # Order detail
+OrderDetail.destroy_all
+OrderDetail.create(order_id: 1, product_id: 5, quantity: 1, size: 'small')
+OrderDetail.create(order_id: 2, product_id: 10, quantity: 1, size: 'medium')
+OrderDetail.create(order_id: 3, product_id: 15, quantity: 1, size: 'large')

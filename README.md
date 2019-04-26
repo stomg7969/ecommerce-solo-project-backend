@@ -2,8 +2,6 @@
 
 Flatiron School Module 5 solo project (BACKEND)
 
-\*
-
 - Ruby version - 2.5.3
 
 - Database creation - postgreSQL
