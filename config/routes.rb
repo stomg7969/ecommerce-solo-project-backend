@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :order_details
+  # resources :order_details => due to order complexity, customizing the routes for this model.
+  resources :order_details, except: [:index, :show]
+  get '/order-details', to: 'order_details#index'
+  get '/order-details/:id', to: 'order_details#show', as: 'detail'
+
   resources :products
   resources :orders
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
