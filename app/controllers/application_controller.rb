@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::API
+  before_action :authorized
+
   def encode_token(payload)
     # payload => { beef: 'steak' }
     JWT.encode(payload, ENV['AUTH_KEY'])
