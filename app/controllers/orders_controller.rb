@@ -10,24 +10,24 @@ class OrdersController < ApplicationController
   end
 
   def show
-    find_order
+    order = find_order
     render json: order
   end
 
   def update
-    find_order
+    order = find_order
     order.update(order_params)
     render json: order
   end
 
   def destroy
-    find_order
+    order = find_order
     order.destory
   end
 
   private
   def find_order
-    order = Order.find(params[:id])
+    Order.find(params[:id])
   end
 
   def order_params

@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    find_user
+    user = find_user
     render json: user
   end
 
@@ -22,13 +22,13 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
-    find_user
+    user = find_user
     user.update(password: params[:user][:password])
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
   end
 
   def destroy
-    find_user
+    user = find_user
     user.destory
   end
 
@@ -38,7 +38,7 @@ class Api::V1::UsersController < ApplicationController
 
   private
   def find_user
-    user = User.find(params[:id])
+    User.find(params[:id])
   end
 
   def user_params

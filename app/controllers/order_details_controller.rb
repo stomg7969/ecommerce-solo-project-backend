@@ -10,24 +10,24 @@ class OrderDetailsController < ApplicationController
   end
 
   def show
-    find_detail
+    detail = find_detail
     render json: detail
   end
 
   def update
-    find_detail
+    detail = find_detail
     detail.update(detail_params)
     render json: detail
   end
 
   def destroy
-    find_detail
+    detail = find_detail
     detail.destory
   end
 
   private
   def find_detail
-    detail = OrderDetail.find(params[:id])
+    OrderDetail.find(params[:id])
   end
 
   def detail_params
