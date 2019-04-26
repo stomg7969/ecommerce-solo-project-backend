@@ -7,4 +7,4 @@ Flatiron School Module 5 solo project (BACKEND)
 - Database creation - postgreSQL
 
 \*\*For this project, frontend and backend have separate repositories.
-[Link to FRONTEND repo](https://github.com/stomg7969/ecommerce-solo-project-fronted)
+[Link to FRONTEND repo](https://github.com/stomg7969/ecommerce-solo-project-frontend)
