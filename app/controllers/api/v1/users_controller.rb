@@ -29,7 +29,7 @@ class Api::V1::UsersController < ApplicationController
 
   def destroy
     user = find_user
-    user.destory
+    user.destroy
   end
 
   def profile
