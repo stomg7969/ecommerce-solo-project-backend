@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
       post '/login', to: 'auth#let_user_in'
+      post '/add_to_cart', to: 'users#order'
       get '/profile', to: 'users#profile'
     end
   end

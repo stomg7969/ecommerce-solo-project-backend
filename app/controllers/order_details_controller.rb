@@ -1,4 +1,6 @@
 class OrderDetailsController < ApplicationController
+  skip_before_action :authorized
+
   def index
     details = OrderDetail.all
     render json: details

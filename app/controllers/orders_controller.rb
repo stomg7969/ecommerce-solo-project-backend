@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  skip_before_action :authorized
+
   def index
     orders = Order.all
     render json: orders
