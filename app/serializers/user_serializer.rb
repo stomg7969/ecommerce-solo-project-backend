@@ -9,7 +9,7 @@ class UserSerializer < ActiveModel::Serializer
         :ship => order.shipping_method,
         :status => order.status,
         :ordered => order.updated_at,
-        :detail => order.order_details
+        :details => order.order_details
       }
     end
   end
