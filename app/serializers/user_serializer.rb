@@ -4,10 +4,12 @@ class UserSerializer < ActiveModel::Serializer
   def orders
     self.object.orders.map do |order|
       {
-        'Order#': order.id,
+        id: order.id,
         :total => order.total_amount,
         :ship => order.shipping_method,
-        :status => order.status
+        :status => order.status,
+        :ordered => order.updated_at,
+        :detail => order.order_details
       }
     end
   end
