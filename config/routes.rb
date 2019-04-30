@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :users
       post '/login', to: 'auth#let_user_in'
       post '/add_to_cart', to: 'users#order'
+      patch '/add_to_cart/:id', to: 'users#update_order'
       get '/profile', to: 'users#profile'
     end
   end

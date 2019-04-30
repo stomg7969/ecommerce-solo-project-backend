@@ -37,8 +37,12 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def order
-
     detail = OrderDetail.create(order_id: params[:order_id], product_id: params[:product_id], quantity: params[:quantity], size: params[:size])
+    render json: detail
+  end
+  def update_order
+    detail = OrderDetail.find(params[:id])
+    detail.update(quantity: params[:quantity])
     render json: detail
   end
 
