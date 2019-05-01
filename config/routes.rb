@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   get '/order-details', to: 'order_details#index'
   get '/order-details/:id', to: 'order_details#show', as: 'detail'
 
-  resources :products
   resources :orders
+  resources :products, except: [:update_inventory]
+  patch '/updateinventory/:id', to: 'products#update_inventory'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do

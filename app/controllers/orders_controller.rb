@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
 
   def destroy
     order = find_order
-    order.destory
+    order.destroy
   end
 
   private

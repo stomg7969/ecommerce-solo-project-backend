@@ -24,7 +24,7 @@ class OrderDetailsController < ApplicationController
 
   def destroy
     detail = find_detail
-    detail.destory
+    detail.destroy
   end
 
   private

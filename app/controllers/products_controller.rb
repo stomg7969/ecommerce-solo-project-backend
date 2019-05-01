@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  skip_before_action :authorized, only: [:index]
+  skip_before_action :authorized, only: [:index, :update_inventory]
 
   def index
     products = Product.all
@@ -23,9 +23,16 @@ class ProductsController < ApplicationController
     render json: product
   end
 
+  def update_inventory
+    product = find_product
+    product.update(inventory: params[:inventory])
+    # update argument must be only thing that I want to update. maybe this can be all this.
+    render json: product
+  end
+
   def destroy
     product = find_product
-    product.destory
+    product.destroy
   end
 
   private

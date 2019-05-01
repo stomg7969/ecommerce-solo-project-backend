@@ -21,7 +21,8 @@ class OrderSerializer < ActiveModel::Serializer
           :name => detail.product.name,
           :price => detail.product.price,
           :image => detail.product.imgBack,
-          :category => detail.product.category
+          :category => detail.product.category,
+          :inventory => detail.product.inventory
         }
       }
     end
