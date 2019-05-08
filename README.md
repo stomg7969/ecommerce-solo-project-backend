@@ -1,6 +1,6 @@
 # ecommerce-website-solo-project
 
-Flatiron School Module 5 solo project (BACKEND)
+_Flatiron School Module 5 solo project (BACKEND)_
 
 - Ruby version - 2.5.3
 
@@ -12,4 +12,4 @@ Original commits are in [this repo](https://github.com/stomg7969/ecommerce-websi
 
 [Link to FRONTEND repo](https://github.com/stomg7969/ecommerce-solo-project-frontend)
 
-\*\*README for this project is written in FRONTEND repo(above link)
+**README for this project is written in FRONTEND repo(above link)**
