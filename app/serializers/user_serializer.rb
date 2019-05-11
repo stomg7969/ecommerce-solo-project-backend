@@ -1,6 +1,10 @@
 class UserSerializer < ActiveModel::Serializer
   attributes :id, :username, :email, :created_at, :isAdmin, :orders
 
+  def username
+    self.object.username.capitalize
+  end
+
   def orders
     self.object.orders.map do |order|
       {
