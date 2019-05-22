@@ -29,11 +29,15 @@ class Api::V1::UsersController < ApplicationController
 
   def destroy
     user = find_user
-    user.orders.map do |orderObj|
-      orderObj.update(user_id: 1)
-      if orderObj.valid?
-        user.destroy
+    if user.orders.count > 0
+      user.orders.map do |orderObj|
+        orderObj.update(user_id: 1)
+        if orderObj.valid?
+          user.destroy
+        end
       end
+    else
+      user.destroy
     end
   end
 
